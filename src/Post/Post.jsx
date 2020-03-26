@@ -2,15 +2,15 @@ import React from 'react';
 import './Post.css';
 // title, body, author, img
 
-const Post = props => {
+const Post = ({ post: { title, img, body, author }, i }) => {
 	return (
 		<div className='post-container'>
-			<h1 className='heading'>{props.post.title}</h1>
-			<img className='image' src={props.post.img} alt='post' />
-			<p>{props.post.body}</p>
+			<h1 className='heading'>{title}</h1>
+			<img className='image' src={img} alt='post' />
+			<p>{body}</p>
 			<div className='info'>
-				<h5>Article Number : {props.i}</h5>
-				<h5>Author : {props.post.author}</h5>
+				<h5>Article Number : {i}</h5>
+				<h5>Author : {author}</h5>
 			</div>
 		</div>
 	);
